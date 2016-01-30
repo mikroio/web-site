@@ -1,0 +1,385 @@
+body {
+  font-family: "Work Sans";
+  font-size: 16px;
+  line-height: 1.6em;
+  color: #2a3132;
+}
+
+.btn-signup {
+  background-color: #336b87;
+  border: none;
+  color: white;
+  font-size: 16px;
+}
+
+.navbar {
+  position: absolute;
+  font-family: "Open Sans";
+  font-size: 16px;
+  padding-top: 30px;
+  top: 0;
+  width: 100%;
+}
+
+.nav li a {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #2a3132;
+}
+
+.m-t {
+  margin-top: 15px;
+}
+
+.m-t-l {
+  margin-top: 30px;
+}
+
+.m-t-xl {
+  margin-top: 60px;
+}
+
+.m-t-xxl {
+  margin-top: 90px;
+}
+
+
+
+.section {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+.section h2 {
+  line-height: 1.4em;
+}
+
+.section h6 {
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+.header {
+  width: 100%;
+  height: 110vh;
+  display: table;
+  background-image: url(../img/splash-1.jpg);
+}
+
+.hero {
+  display: table-cell;
+  vertical-align: middle;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.hero h1 {
+  font-size: 42px;
+}
+
+.hero h3 {
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 1.4;
+}
+
+.hero .btn {
+  margin-top: 30px;
+  font-size: 21px;
+  background-color: #336b87;
+  border: none;
+}
+
+.section.value-prop {
+  padding-bottom: 0px;
+}
+
+.section.value-prop small {
+  color: #ccc;
+}
+
+.highlights p {
+  font-size: 19px;
+  font-weight: 300;
+}
+
+.highlights .large {
+  /* -webkit-filter: blur(3px); */
+}
+
+.highlights .focus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85),
+    0 0 7px 7px rgba(0, 0, 0, 0.25),
+    inset 0 0 40px 2px rgba(0, 0, 0, 0.25);
+  background: url('../img/commit-list-2.png') no-repeat;
+}
+
+.focus.button {
+  background-position: 91% 32%;
+  background-size: inherit;
+  left: 410px;
+  top: 45px;
+}
+
+.focus.commits {
+  background-position: 11% 34%;
+  background-size: inherit;
+  left: 5px;
+  top: 220px;
+}
+
+.highlights h6 {
+  color: #ccc;
+}
+
+.font-small {
+  font-size: 15px !important;
+}
+
+
+.manifest {
+  background-color: #2a3132;
+  color: #90afc5;
+  /* #ABC7CF;  */
+}
+
+.manifest h6 {
+  color: #90afc5;
+}
+
+.manifest h2 {
+  color: #B8DFFF;
+}
+
+.manifest pre {
+  background: #2a3132;
+  padding: 15px;
+  color: #90afc5;
+  border: 1px solid #336b87;
+  font-size: 16px;
+  line-height: 1.6em;
+}
+
+.manifest pre em {
+  font-style: normal;
+  color: #B8DFFF;
+}
+
+
+.features {
+  background: #f4f4f6;
+}
+
+.features .row:not(last-child) {
+  margin-bottom: 30px;
+}
+
+.features h6, .features h2 {
+  text-align: center;
+}
+
+.features .fa {
+  display: block;
+  font-size: 160px;
+  text-align: center;
+  padding-bottom: 15px;
+  color: #336b87;
+}
+
+
+.cube-camera {
+  /* background-color: green; */
+  padding-top: 140px;
+  -webkit-perspective: 437px;
+  -webkit-perspective-origin: 220px 50px;
+  height: 400px;
+  width: 450px;
+  position: relative;
+  float: left;
+}
+
+.cube {
+  position: relative;
+  /* left: 10px; */
+  height: 200px;
+  width: 200px;
+  left: 120px;
+  top: -120px;
+  -webkit-transition: -webkit-transform 1s linear;
+  -webkit-transform-style: preserve-3d;
+
+  transform: rotateX(-12deg) rotateY(-45deg);
+}
+
+.cube.go {
+  transform: rotateX(0deg) rotateY(0deg);
+}
+
+
+.face {
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  left: 0;
+  top: 0;
+  /* padding: 20px; */
+  background-color: rgba(144, 175, 197, 1);
+  transition: -webkit-transform 1s ease-in, opacity 0.8s ease-in-out 0.5s, width 1s, height 1s, top 1s, left 1s, background-color 1s;
+
+  opacity: 1;
+}
+.cube.go .face {
+  opacity: 0.3;
+}
+
+.cube .icon {
+  position: absolute;
+  left: -130px;
+  top: -120px;
+  transition: opacity 1s ease-in-out 0.5s;
+  opacity: 0;
+}
+
+.cube.go .icon {
+  opacity: 1;
+}
+
+
+.cube .one  {
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+}
+.cube.go .one {
+  -webkit-transform: rotateX(90deg) translateZ(200px);
+}
+
+.cube .two {
+  -webkit-transform: translateZ(100px);
+  background-color: rgba(51, 107, 135, 0.3);
+  /* background-color: #90afc5; */
+  /* background-color: rgba(119, 54, 38, 1); RÖD */
+}
+.cube.go .two {
+  -webkit-transform: translateZ(200px);
+  /*background-color: #90afc5;
+  height: 440px;
+  width: 1000px;
+  left: -200px;
+  top: 290px; */
+  opacity: 0.0;
+}
+
+.cube .three {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+  background-color: rgba(51, 107, 135, 1);
+
+}
+.cube.go .three {
+  -webkit-transform: rotateY(90deg) translateZ(200px);
+  background-color: rgba(144, 175, 197, 1);
+}
+
+.cube .four {
+  -webkit-transform: rotateY(180deg) translateZ(100px);
+}
+.cube.go .four {
+  -webkit-transform: rotateY(180deg) translateZ(200px);
+}
+
+.cube .five {
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+}
+.cube.go .five {
+  -webkit-transform: rotateY(-90deg) translateZ(200px);
+}
+
+.cube .six {
+  -webkit-transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+}
+.cube.go .six {
+  -webkit-transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
+}
+
+
+.pricing {
+  background: #f4f4f6;
+}
+
+.pricing .price p {
+  font-weight: 300;
+}
+.pricing .price .per-month {
+  font-size: 13px;
+}
+
+.pricing .price h1 {
+  font-size: 72px;
+}
+
+.pricing .price sup, .pricing .price small {
+  font-size: 15px;
+}
+
+.pricing .price sup {
+  top: -35px;
+  margin-right: 5px;
+}
+
+.pricing h6, .pricing h2, .pricing h3 {
+  text-align: center;
+}
+
+.pricing h3 {
+  color: #336b87;
+}
+
+.pricing .price {
+  text-align: center;
+}
+
+.pricing ul {
+  list-style: none;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding-left: 0px;
+}
+
+.pricing ul li {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #ccc;
+  font-weight: 300;
+}
+
+.pricing ul li:last-child {
+  border-bottom: 1px solid #ccc;
+}
+
+.pricing em {
+  font-weight: 500;
+  font-style: normal;
+}
+
+.footer {
+  background-color: #2a3132;
+  color: #90afc5;
+}
+
+.footer h6 {
+  text-align: left;
+  color: #B8DFFF;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.footer a {
+  color: #90afc5;
+}

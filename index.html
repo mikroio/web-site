@@ -5,327 +5,377 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>mikro.io</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap-theme.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css" rel="stylesheet">
 
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/grayscale.css" rel="stylesheet">
-  <link href="css/flaticon.css" rel="stylesheet">
-  <link href="http://cdn.rawgit.com/noelboss/featherlight/1.0.3/release/featherlight.min.css" type="text/css" rel="stylesheet" title="Featherlight Styles" />
-  <link rel="stylesheet" type="text/css" href="css/slick.css">
-  <link rel="stylesheet" type="text/css" href="css/slick-theme.css">
-
+  <link href="css/mikro.css" rel="stylesheet">
   <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
   <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Work+Sans:300,400,500,600,700' rel='stylesheet' type='text/css'>
 </head>
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<body>
+  <div class="header">
+    <nav class="navbar navbar-custom navbar-static-top" role="navigation">
       <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-          <i class="fa fa-bars"></i>
-        </button>
-        <a class="navbar-brand page-scroll" href="#page-top">
-          mikro.io
-        </a>
-      </div>
-
-      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-        <ul class="nav navbar-nav">
-          <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-          <li class="hidden">
-            <a href="#page-top"></a>
-          </li>
-          <li><a class="page-scroll" href="#features">Features</a></li>
-          <li><a class="page-scroll" href="#how-it-works">How it works</a></li>
-          <li><a class="page-scroll" href="#pricing">Pricing</a></li>
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="img/logo-1.svg" width="25px">
+          </a>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How it works</a></li>
+          <li><a href="#pricing">Pricing</a></li>
         </ul>
+      </div>
+    </nav>
+
+    <div class="hero">
+      <div class="container">
+        <h1>Microservices should be this simple</h1>
+
+        <h3>
+          We take Amazon Web Services and make it the best
+          platform for microservices it can be.
+        </h3>
+
+        <a class="btn btn-warning btn-xl">
+          Request an invite!
+        </a>
       </div>
     </div>
   </div>
-  </nav>
 
-  <header class="intro">
-    <div class="intro-body">
-      <div class="container">
-        <div class="container">
-          <div class="cube-camera">
-            <div class="cube">
-              <div class="face one">
-              </div>
-              <div class="face two">
-              </div>
-              <div class="face three">
-              </div>
-              <div class="face four">
-              </div>
-              <div class="face five">
-              </div>
-              <div class="face six">
-              </div>
+  <div class="section value-prop" id="value-prop">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="foo">
+            <img class="large" src="img/tree-1.png">
+          </div>
+        </div>
+        <div class="col-md-6 m-t-xl">
+          <h6>What we're about</h6>
+          <h2>Focus on microservices</h2>
+          <p>
+            Amazon Web Services is a powerful platform, but to get all that
+            power you have to do a lot of integration and scripting yourself.
+            Not anymore. We take the best AWS services* and tailor them for a
+            microservice environment.
+          </p>
+          <p>
+            The result is a platform as powerful as
+            AWS, but with the simplicity of Heroku. And it's all running
+            in your AWS account. We provide the icing on the cake.
+          </p>
+          <p>
+            <small>* we're mostly using CloudFormation, EC2 and ECS</small>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 
-              <div class="icon">
-                <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/AWS_Simple_Icons_AWS_Cloud.svg/480px-AWS_Simple_Icons_AWS_Cloud.svg.png"> -->
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/AWS_Simple_Icons_AWS_Cloud.svg" width="480" height="480">
-              </div>
+  <div class="section manifest">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 m-t-l">
+          <h6>Declarative service definitions</h6>
+          <h2>State what you need and provide. We'll take care
+            of the rest.</h2>
+          <p>
+            Each service has a simple manifest where you declare what kind
+            of resources (e.g., databases, caches) it needs,
+            what other services it depends on and what port it exposes.
+          </p>
+          <p>
+            We use this information to wire everything together and to make
+            sure your applicaiton gets the resources it needs to run.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <pre class="box">
+expose: <em>8000</em>
+require:
+  cpu: <em>512</em>
+  mem: <em>4096</em>
+resources:
+  db: <em>aws:rds:mysql-5.6</em>
+  cache:
+    type: <em>aws:elasticacher:redis-1.9</em>
+    preferred-maintaince-window: <em>sun:05:00-sun:09:00</em>
+dependencies:
+  - <em>user</em>
+  - <em>geodb</em></pre>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section highlights">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="foo">
+            <img class="large" src="img/commit-list-2.png" width="100%">
+            <div class="focus button"></div>
+            <div class="focus commits"></div>
+          </div>
+        </div>
+        <div class="col-md-6 m-t-xl">
+          <h6>Github Integration</h6>
+          <h2>The code is where you feel at home.</h2>
+          <p>
+            We bring that feeling to your production environment by having
+            a deep integration with Github.
+          </p>
+
+          <div class="row m-t">
+            <div class="col-xs-6">
+              <h5>See actual changes</h5>
+              <p class="font-small">
+                Inspect what code has been changed when deploying: what commits
+                will be introduced and which files has changed.
+              </p>
+            </div>
+            <div class="col-xs-6">
+              <h5>Deploy your code</h5>
+              <p class="font-small">
+                Look at a commit and deploy that rather than some strangely
+                named artifact.
+              </p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+  <div class="section features" id="features">
+    <div class="container">
+      <h6>Inside the machine</h6>
+      <h2>We try to make your life easier every day.</h2>
 
-        <div class="intro-text">
-          <h1>Microservices should be this simple!</h1>
-          <small>
-            Deploy and run your services in a minute with the
-            raw power of AWS at your hands.
-          </small>
-
-          <div class="intro-signup">
-            <a href="https://github.com/mikroio/invites/issues/new?title=I%20want%20an%20invite&body=I%20would%20love%20to%20try%20out%20your%20service%20when%20it%27s%20ready!">
-            REQUEST AN INVITE
-            </a>
+      <div class="m-t-xl">
+        <div class="row">
+          <div class="col-md-4">
+            <p>
+              <strong>Service Discovery.</strong>
+              Find others to talk to. Have them find you. It all comes out of
+              the box looking like Docker links.
+            </p>
           </div>
-          <!-- <div class="cursor"></div> -->
+          <div class="col-md-4">
+            <p>
+              <strong>Rate Limiting.</strong>
+              A service's users can quickly turn into a mob. It's important
+              that you protect yourself.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              <strong>Multiple Clusters.</strong>
+              Have production, testing and staging environments if you like.
+              Or set up shop in multiple regions.
+              </optgroup>
+            </p>
+          </div>
         </div>
-        <!-- <div class="intro-signup">
-          <a href="#signup" class="page-scroll">Sign up for a free 7 day trial!</a>
-        </div> -->
+        <div class="row">
+          <div class="col-md-4">
+            <p>
+              <strong>Deployment History.</strong>
+              We remember who did what when. This makes your life a lot easier
+              when shit happens. And it will.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              <strong>Task Logs.</strong>
+              Inspect and read the logs from your tasks right here in our
+              interface. Filters are available.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              <strong>CloudWatch Metrics.</strong>
+              Easily emit metrics from your services and have them end up as
+              graphs in CloudWatch.
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <p>
+              <strong>No Registry.</strong>
+              Your Docker images are uploaded straight to S3 without a registry.
+              This make things more reliable and less costly.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              <strong>Known Technology.</strong>
+              We're using AWS EC2, ECS and CloudFormation and other AWS services
+              that has been battletested by thousands of people before us.
+            </p>
+          </div>
+          <div class="col-md-4">
+            <p>
+              <strong>HTTPS and SSL.</strong>
+              With the new Amazon Certificate Manager the services you expose
+              to the internet can be protected with SSL. For free.
+            </p>
+          </div>
+        </div>
       </div>
-
-      <!-- <a href="#basics" class="btn btn-circle page-scroll">
-        <i class="fa fa-angle-double-down animated"></i>
-      </a> -->
-
     </div>
-  </header>
+  </div>
 
-  <section class="section" id="features">
+  <div class="section break-the-box">
     <div class="container">
-      <h1 class="title">Highlighted features</h1>
+      <div class="col-md-6">
+        <div class="cube-camera animatedParent animateOnce" data-appear-top-offset="-300">
+          <div class="cube animated">
+            <div class="face one">
+            </div>
+            <div class="face two">
+            </div>
+            <div class="face three">
+            </div>
+            <div class="face four">
+            </div>
+            <div class="face five">
+            </div>
+            <div class="face six">
+            </div>
+            <div class="icon">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/AWS_Simple_Icons_AWS_Cloud.svg" width="480" height="480">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 m-t-l">
+        <h6>Raw Amazon Web Services</h6>
+        <h2>Break open the box.</h2>
+        <p>
+          Regular platform as a services work great up to a certain point, but
+          then you hit the wall: either it doesn't scale, it costs too much, or lacks some
+          crucial functionality.
+        </p>
+        <p>
+          With mikro.io you always have the raw power of AWS available
+          for you to use. You can even run a few mikro.io clusters alongside
+          other things you already have running on AWS. No need to compromise.
+        </p>
+      </div>
     </div>
+  </div>
 
-    <div class="container slider">
-      <div class="row">
-        <div class="col-lg-5">
-          <h2>Making it simple</h2>
-          <p>
-            Unfortunately, microservices isn't a free lunch. The overhead of
-            maintaining and operating your service scales with the number of
-            services. Therefore mikro.io works hard at lowering that overhead.
-            Actually we're doing everything we can to make <i>you</i> faster.
-          </p>
-          <p>
-            Deploying a change is just a click (or a commit) away. We support
-            the most common patterns such as canary releases and blue/green
-            deployment, and integrate with tools like
-            <a href="https://circleci.com/">CircleCI</a>.
-          </p>
-          <p>
-            Setting up a new service takes literally 30 seconds.
-          </p>
-        </div>
-        <div class="col-lg-7">
-          <img width="100%" src="img/commit-list.png"></img>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-7">
-          <img src="img/deploy.png" width="100%"></img>
-        </div>
-        <div class="col-lg-5">
-          <h2>We like octocats too.</h2>
-          <p>
-            We think Github is a great tool for collaboration and developer
-            productivity. We hope you think so too. Therefore have deeply integrated
-            Github into mikro.io to get that tight connection between your code and
-            your production environment.
-          </p>
-          <p>
-            Every project on <span class="brand">mikro.io</span> is attached to
-            a Github organization. Members of the organizatin automatically gets
-            access to <span class="brand">mikro.io</span>.  No need to manage
-            teams and members in multiple places.
-          </p>
-          <p>
-            You probably have more important things to do anyway.
-          </p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-7">
-          <img src="img/tasks.png" width="100%"></img>
-        </div>
-        <div class="col-lg-5">
-          <h2>Know what's running</h2>
-          <p>
-            It's kinda fundamental that you wanna know what's running in your cluster.
-          </p>
-          <p>
-            <span class="brand">mikro.io</span> gives you an overview of all the tasks
-            for your service and their state. You can drill down and see why they
-            stopped and filter through the logs.
-          </p>
-        </div>
-      </div>
-        <!-- <a href="#pricing" class="btn btn-circle page-scroll">
-        <i class="fa fa-angle-double-down animated"></i>
-      </a> -->
-    </div>
-  </section>
-
-  <section class="section" id="how-it-works">
+  <div class="section pricing" id="pricing">
     <div class="container">
-      <h1 class="title">How it works</h1>
+      <h2>We add a little to your AWS bill, but we hope you
+        find it's worth it.</h2>
 
-      <div class="row">
-        <div class="col-lg-4">
-          <div class="step">1</div>
-          <p class="text">
-            You give us access to your AWS account. We'll use it carefully, we
-            promise.
-          </p>
-        </div>
-        <div class="col-lg-4">
-          <div class="step">2</div>
-          <p class="text">
-            We create a Elastic Container Service cluster and an autoscaling group
-            that we'll manage for you. This is where your services
-            will run.
-          </p>
-        </div>
-        <div class="col-lg-4">
-          <div class="step">3</div>
-          <p class="text">
-            Create a service and connect it your Github repository.
-            Build an container image, push it and deploy. It's that simple.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <h3>Pss. Set up a new AWS account and get a free trial using the free tier.</h3>
 
-  <section class="section" id="pricing">
-    <div class="container">
-      <h1 class="title">Pricing</h1>
-
-      <div class="row">
-        <div class="col-md-4 plan">
-          <h4>Private</h4>
-
-          <div>
-            <div class="price-bubble">
+        <div class="m-t-xl">
+          <div class="row">
+            <div class="col-md-4">
               <div class="price">
-                Free
-                4ever
+                <h6>Personal</h6>
+                <h1>Free</h1>
+                <p>For your experiments and small projects.</p>
               </div>
+              <ul>
+                <li><em>Personal</em> Github repositories</li>
+                <li><em>One</em> cluster</li>
+                <li><em>Unlimited</em> services</li>
+              </ul>
+              <a class="btn btn-signup btn-block" href="https://github.com/mikroio/invites/issues/new?title=I%20want%20an%20invite&body=I%20would%20love%20to%20try%20out%20your%20service%20when%20it%27s%20ready!">
+                Request an invite
+              </a>
             </div>
-          </div>
-
-          <div class="limits">
-            <ul>
-              <li>10 cluster instances</li>
-              <li>Unlimited services</li>
-              <li>Unlimited deploys</li>
-            </ul>
-          </div>
-
-          <a href="https://github.com/mikroio/invites/issues/new?title=I%20want%20an%20invite&body=I%20would%20love%20to%20try%20out%20your%20service%20when%20it%27s%20ready!" class="btn btn-block btn-info">
-            REQUEST AN INVITE
-          </a>
-        </div>
-
-        <div class="col-md-4 plan">
-          <h4>Startup</h4>
-
-          <div>
-            <div class="price-bubble">
+            <div class="col-md-4">
               <div class="price">
-                $50
+                <h6>Startup</h6>
+                <h1><sup>$</sup>24<small>/MO</small></h1>
+                <p>Until you've found product/market-fit.</p>
               </div>
-              Per Month
+              <ul>
+                <li><em>Private</em> Github repositories</li>
+                <li><em>One</em> cluster</li>
+                <li><em>Unlimited</em> services</li>
+              </ul>
+              <a class="btn btn-signup btn-block" href="https://github.com/mikroio/invites/issues/new?title=I%20want%20an%20invite&body=I%20would%20love%20to%20try%20out%20your%20service%20when%20it%27s%20ready!">
+                Request an invite
+              </a>
             </div>
-          </div>
-
-          <div class="limits">
-            <ul>
-              <li>10 cluster instances</li>
-              <li>Unlimited services</li>
-              <li>Unlimited deploys</li>
-            </ul>
-          </div>
-
-          <a href="https://github.com/mikroio/invites/issues/new?title=I%20want%20an%20invite&body=I%20would%20love%20to%20try%20out%20your%20service%20when%20it%27s%20ready!" class="btn btn-block btn-info">
-            REQUEST AN INVITE
-          </a>
-        </div>
-        <div class="col-md-4 plan">
-          <h4>Enterprise</h4>
-          <div>
-            <div class="price-bubble">
+            <div class="col-md-4">
               <div class="price">
-                $500
+                <h6>Enterprise</h6>
+                <h1><sup>$</sup>49<small>/MO</small></h1>
+                <p>Unicorn and beyond.</p>
               </div>
-              Per Month
+              <ul>
+                <li><em>Private</em> Github repositories</li>
+                <li><em>Unlimited</em> clusters</li>
+                <li><em>Unlimited</em> services</li>
+              </ul>
+              <a class="btn btn-signup btn-block" href="https://github.com/mikroio/invites/issues/new?title=I%20want%20an%20invite&body=I%20would%20love%20to%20try%20out%20your%20service%20when%20it%27s%20ready!">
+                Request an invite
+              </a>
             </div>
           </div>
-
-          <div class="limits">
-            <ul>
-              <li>Unlimited cluster instances</li>
-              <li>Unlimited services</li>
-              <li>Unlimited deploys</li>
-            </ul>
+          <div class="fine-print m-t-l">
+            <strong>Note:</strong> Every subscription is tied to a Github user or organization.
+            If you have multiple organizations you'll need multiple subscriptions.
           </div>
-
-          <a href="https://github.com/mikroio/invites/issues/new?title=I%20want%20an%20invite&body=I%20would%20love%20to%20try%20out%20your%20service%20when%20it%27s%20ready!" class="btn btn-block btn-info">
-            REQUEST AN INVITE
-          </a>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- Footer -->
-  <footer>
+  <div class="section footer">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8">
-          <p>Copyright &copy; <a href="mailto:contact@mikro.io">mikro.io</a> 2015</p>
+        <div class="col-md-8">
+          <h6>About</h6>
+          <p>
+            We're a bunch of people who have spent years building a microservice
+            infrastructure at Spotify. We're taking what we learnt there and
+            putting it into this product for you to use.
+          </p>
+          <p>
+            We hope you'll enjoy it.
+          </p>
         </div>
-        <div class="col-lg-4">
-          <a href="https://twitter.com/mikroio" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @mikroio</a>
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+        <div class="col-md-2">
+          <h6>Contact</h6>
+          <ul>
+            <li><a href="https://twitter.com/mikroio"><span class="fa fa-twitter-square"> Twitter</span></a></li>
+            <li><a href="mailto:contact@mikro.io"><span class="fa fa-envelope"> Email</span></a></li>
+          </ul>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 
-  <!-- jQuery -->
   <script src="js/jquery.js"></script>
-  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script> -->
-  <script type="text/javascript" src="js/slick.min.js"></script>
-
-  <script src="js/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.min.js"></script>
-  <script src="js/grayscale.js"></script>
-
-
+  <script src="js/css3-animate-it.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
   ga('create', 'UA-58235510-1', 'auto');
   ga('send', 'pageview');
-
   </script>
-
 </body>
-
 </html>
