@@ -192,6 +192,18 @@ body {
   color: #336b87;
 }
 
+.features .soon {
+  border-radius: 10%;
+  display: inline-block;
+  border: 5px solid #763626;
+  color: #763626;
+  padding: 5px;
+  transform: rotate(-25deg);
+  text-transform: uppercase;
+  position: absolute;
+  right: 30px;
+  bottom: 0px;
+}
 
 .cube-camera {
   /* background-color: green; */
